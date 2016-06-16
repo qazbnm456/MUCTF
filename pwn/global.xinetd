@@ -1,0 +1,14 @@
+service global
+{
+	disable = no
+	type = UNLISTED
+	wait = no
+	server = /usr/bin/docker
+	server_args = run -i --rm global
+	socket_type = stream
+	protocol = tcp
+	user = root
+	port = 10079
+	flags = REUSE
+	per_source = 1
+}

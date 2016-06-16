@@ -1,0 +1,14 @@
+service md5
+{
+	disable = no
+	type = UNLISTED
+	wait = no
+	server = /usr/bin/docker
+	server_args = run -i --rm md5
+	socket_type = stream
+	protocol = tcp
+	user = root
+	port = 10078
+	flags = REUSE
+	per_source = 1
+}
